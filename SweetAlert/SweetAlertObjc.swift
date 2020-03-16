@@ -232,19 +232,19 @@ let s_pSweetAlert = SweetAlertObjc()
         self.contentView = UIView()
     }
     
-    @objc func showAlert(_ title: String) -> SweetAlertObjc {
+    @objc public func showAlert(_ title: String) -> SweetAlertObjc {
         _ = self.showAlert(title, subTitle: nil, style: SweetAlertObjc.None)
         return self
     }
     
-    @objc func showAlert(_ title: String?, subTitle: String?, style: String) -> SweetAlertObjc {
+    @objc public func showAlert(_ title: String?, subTitle: String?, style: String) -> SweetAlertObjc {
         _ = self.showAlert(title, subTitle: subTitle, style: style, buttonTitle: "OK")
         return self
         
     }
     
     
-    @objc func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String?, action: ((_ isOtherButton: Bool) -> Void)? = nil) -> SweetAlertObjc {
+    @objc public func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String?, action: ((_ isOtherButton: Bool) -> Void)? = nil) -> SweetAlertObjc {
         if (buttonTitle != nil){
             _ = self.showAlert(title, subTitle: subTitle, style: style, buttonTitle: buttonTitle!,buttonColor:tealColor)
             
@@ -256,14 +256,14 @@ let s_pSweetAlert = SweetAlertObjc()
         return self
     }
     
-    @objc func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,buttonColor: UIColor,action: ((_ isOtherButton: Bool) -> Void)? = nil) -> SweetAlertObjc {
+    @objc public func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,buttonColor: UIColor,action: ((_ isOtherButton: Bool) -> Void)? = nil) -> SweetAlertObjc {
         _ = self.showAlert(title, subTitle: subTitle, style: style, buttonTitle: buttonTitle,buttonColor: buttonColor,otherButtonTitle:
             nil)
         userAction = action
         return self
     }
     
-    @objc func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,otherButtonTitle:
+    @objc public func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,otherButtonTitle:
         String?, action: ((_ isOtherButton: Bool) -> Void)? = nil) -> SweetAlertObjc {
         self.showAlert(title, subTitle: subTitle, style: style, buttonTitle: buttonTitle,buttonColor: tealColor,otherButtonTitle:
             otherButtonTitle,otherButtonColor: redColor)
@@ -272,7 +272,7 @@ let s_pSweetAlert = SweetAlertObjc()
     }
     
     
-    @objc func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,buttonColor: UIColor,otherButtonTitle:
+    @objc public func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,buttonColor: UIColor,otherButtonTitle:
         String?, action: ((_ isOtherButton: Bool) -> Void)? = nil) -> SweetAlertObjc {
         self.showAlert(title, subTitle: subTitle, style: style, buttonTitle: buttonTitle,buttonColor: buttonColor,otherButtonTitle:
             otherButtonTitle,otherButtonColor: redColor)
@@ -280,7 +280,7 @@ let s_pSweetAlert = SweetAlertObjc()
         return self
     }
     
-    @objc func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,buttonColor: UIColor,otherButtonTitle:
+    @objc public func showAlert(_ title: String?, subTitle: String?, style: String,buttonTitle: String,buttonColor: UIColor,otherButtonTitle:
         String?, otherButtonColor: UIColor?,action: ((_ isOtherButton: Bool) -> Void)? = nil) {
         userAction = action
         let window: UIWindow = UIApplication.shared.keyWindow!
