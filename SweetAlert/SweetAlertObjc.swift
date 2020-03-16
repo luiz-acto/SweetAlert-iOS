@@ -47,10 +47,10 @@ let s_pSweetAlert = SweetAlertObjc()
     let tealColor:UIColor = UIColor(red: 20/255, green: 152/255, blue: 139/255, alpha: 1);
     let redColor:UIColor = UIColor(red: 235/255, green: 91/255, blue: 74/255, alpha: 1);
     
-    @objc static let Success:String    = "Success"
-    @objc static let Warning:String    = "Warning"
-    @objc static let Error:String      = "Error"
-    @objc static  let None:String      = "None"
+    @objc public static let Success:String    = "Success"
+    @objc public static let Warning:String    = "Warning"
+    @objc public static let Error:String      = "Error"
+    @objc public static  let None:String      = "None"
     
     
     @objc public class func getInstance() -> SweetAlertObjc {
